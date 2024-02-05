@@ -90,7 +90,7 @@ function WrapText() {
     };
 
     return (
-        <div className="bg-slate-100 dark:bg-slate-300 p-8 rounded-lg shadow-md w-1/2 space-y-4 flex flex-col content-center items-center">
+        <div className="bg-slate-100 dark:bg-slate-300 p-8 rounded-lg shadow-md min-h-fit h-full w-10/12 space-y-4 flex flex-col content-center items-center">
             <input
                 type="text"
                 value={inputText}
@@ -100,7 +100,7 @@ function WrapText() {
             />
             <div className="flex flex-col items-start w-full">
                 Convert by:
-                <div className="flex space-x-4">
+                <div className="flex sm:flex-row flex-col items-around sm:space-x-4">
                     {options.map((option) => (
                         <label key={option.value} className="flex items-center">
                             <input
@@ -126,7 +126,7 @@ function WrapText() {
                 value={outputText}
                 type="text"
                 readOnly
-                className="border p-4 w-full h-32 min-h-32 max-h-32 overflow-scroll rounded-md border-gray-300 bg-gray-200"
+                className="border p-4 w-full h-fit min-h-32 max-h-64 overflow-scroll rounded-md border-gray-300 bg-gray-200"
                 disabled
             />
             <button

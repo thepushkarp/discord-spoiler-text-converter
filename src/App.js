@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 function App() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen w-full bg-white dark:bg-slate-900">
+        <div className="flex flex-col items-center justify-center h-full min-h-screen w-full bg-white dark:bg-slate-900">
             <Helmet>
                 <title>Discord Spoiler Text Converter</title>
                 <meta
@@ -36,7 +36,7 @@ function App() {
                 <span>Discord Spoiler</span>
                 <span>Text Converter</span>
             </div>
-            <WrapText />
+            <WrapText className="w-full h-full" />
             <Footer />
         </div>
     );
