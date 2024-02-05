@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+<p align="center"><img alt="Discord Spoiler Text Converter" src="public/logo512.png" width="200"></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Discord Spoiler Text Converter</h1>
 
-## Available Scripts
+<p align="center">Convert your text to Discord Spoiler Text in an instant</P>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## What is this?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a simple web app that converts your text to Discord Spoiler Text. You can use this to convert your text to Discord Spoiler Text and then copy it to your clipboard all through the click of buttons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to use?
 
-### `npm test`
+1. Visit the website [here](https://discord-spoiler-text-converter.thepushkarp.com/).
+2. Enter your text in the input box.
+3. Click on the "Convert to Discord Spoiler Text" button.
+4. Your text will be converted to Discord Spoiler Text.
+5. Click on the "Copy to Clipboard" button to copy the converted text to your clipboard.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  <a href="https://github.com/thepushkarp/discord-spoiler-text-converter" target="_blank" rel="noopener noreferrer">
+    Discord Spoiler Text Converter
+  </a>
+  made with ❤️ by
+  <a href="https://github.com/thepushkarp">
+    Pushkar  Patel
+  </a>
+</p>
