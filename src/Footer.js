@@ -6,8 +6,8 @@ const Footer = () => {
             <p>
                 <a
                     href="https://github.com/thepushkarp/discord-spoiler-text-converter"
-                    noreferrer
-                    noopener
+                    noreferrer="true"
+                    noopener="true"
                     target="blank"
                     className="text-blue-600 dark:text-blue-300 hover:underline"
                 >
@@ -16,8 +16,8 @@ const Footer = () => {
                 built with ❤️ by{' '}
                 <a
                     href="https://thepushkarp.com/"
-                    noreferrer
-                    noopener
+                    noreferrer="true"
+                    noopener="true"
                     target="blank"
                     className="text-blue-600 dark:text-blue-300 hover:underline"
                 >
