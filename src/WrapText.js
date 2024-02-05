@@ -84,7 +84,7 @@ function WrapText() {
     };
 
     return (
-        <div className="bg-gray-100 dark:bg-gray-400 p-8 rounded-lg shadow-md w-1/2 space-y-4 flex flex-col content-center items-center">
+        <div className="bg-gray-100 dark:bg-gray-300 p-8 rounded-lg shadow-md w-1/2 space-y-4 flex flex-col content-center items-center">
             <input
                 type="text"
                 value={inputText}
@@ -111,7 +111,7 @@ function WrapText() {
             </div>
             <button
                 onClick={handleWrap}
-                className="w-full bg-blue-600 text-white py-2 rounded-md disabled:bg-gray-400 disabled:opacity-50 hover:bg-blue-700 active:bg-blue-800"
+                className="w-full bg-blue-600 text-white py-2 rounded-md disabled:bg-gray-500 disabled:opacity-50 hover:bg-blue-700 active:bg-blue-800"
                 disabled={!inputText}
             >
                 Convert to Discord Spoiler Text
@@ -125,7 +125,7 @@ function WrapText() {
             />
             <button
                 onClick={copyToClipboard}
-                className="px-3 bg-blue-600 text-white py-2 rounded-md flex flex-row justify-center disabled:bg-gray-400 disabled:opacity-50 hover:bg-blue-700 active:bg-blue-800"
+                className="px-3 bg-blue-600 text-white py-2 rounded-md flex flex-row justify-center disabled:bg-gray-500 disabled:opacity-50 hover:bg-blue-700 active:bg-blue-800"
                 disabled={!outputText}
                 id="copy-button"
             >
