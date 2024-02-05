@@ -90,7 +90,7 @@ function WrapText() {
     };
 
     return (
-        <div className="bg-gray-100 dark:bg-gray-300 p-8 rounded-lg shadow-md w-1/2 space-y-4 flex flex-col content-center items-center">
+        <div className="bg-slate-100 dark:bg-slate-300 p-8 rounded-lg shadow-md w-1/2 space-y-4 flex flex-col content-center items-center">
             <input
                 type="text"
                 value={inputText}
