@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import WrapText from './WrapText';
+import Footer from './Footer';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                 <span>Text Converter</span>
             </div>
             <WrapText />
+            <Footer />
         </div>
     );
 }

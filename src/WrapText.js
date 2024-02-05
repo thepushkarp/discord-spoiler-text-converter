@@ -126,7 +126,7 @@ function WrapText() {
                 value={outputText}
                 type="text"
                 readOnly
-                className="border p-4 w-full h-32 min-h-32 max-h-64 overflow-scroll rounded-md border-gray-300 bg-gray-200"
+                className="border p-4 w-full h-32 min-h-32 max-h-32 overflow-scroll rounded-md border-gray-300 bg-gray-200"
                 disabled
             />
             <button
