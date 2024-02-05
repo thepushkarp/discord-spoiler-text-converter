@@ -1,10 +1,10 @@
 import React from 'react';
-import WrapUI from './WrapUI';
+import WrapText from './WrapText';
 
 function App() {
     return (
-        <div className="flex items-center justify-center h-screen">
-            <WrapUI />
+        <div className="flex items-center justify-center h-screen w-full bg-white dark:bg-gray-800">
+            <WrapText />
         </div>
     );
 }
