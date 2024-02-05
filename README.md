@@ -18,6 +18,11 @@ This is a simple web app that converts your text to Discord Spoiler Text. You ca
 4. Your text will be converted to Discord Spoiler Text.
 5. Click on the "Copy to Clipboard" button to copy the converted text to your clipboard.
 
+## LICENSE
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
 
 <p align="center">
   <a href="https://github.com/thepushkarp/discord-spoiler-text-converter" target="_blank" rel="noopener noreferrer">
