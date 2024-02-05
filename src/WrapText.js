@@ -71,12 +71,18 @@ function WrapText() {
                     copySpan.textContent = 'Copied!';
                     copyButton.disabled = true;
                     copyButton.classList.add('disabled:bg-green-700');
-                    copyButton.classList.remove('disabled:opacity-50');
+                    copyButton.classList.remove(
+                        'disabled:opacity-50',
+                        'disabled:bg-gray-500',
+                    );
                     setTimeout(() => {
                         copySpan.textContent = 'Copy to Clipboard';
                         copyButton.disabled = false;
                         copyButton.classList.remove('disabled:bg-green-700');
-                        copyButton.classList.add('disabled:opacity-50');
+                        copyButton.classList.add(
+                            'disabled:opacity-50',
+                            'disabled:bg-gray-500',
+                        );
                     }, 500);
                 }
             })
