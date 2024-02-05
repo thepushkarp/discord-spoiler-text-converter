@@ -18,12 +18,12 @@ body {
     font-family: 'Honk', sans-serif;
     font-size: 5rem;
     line-height: 1;
-    color: #000;
+    color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
     .heading {
-        color: #fff;
+        color: #000;
     }
 }
 
