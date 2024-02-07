@@ -10,6 +10,21 @@
 
 This is a simple web app that converts your text to Discord Spoiler Text. You can use this to convert your text to Discord Spoiler Text and then copy it to your clipboard all through the click of buttons.
 
+## What are Discord Spoilers?
+
+Discord spoilers are a feature that allows users to hide messages, images, or attachments that might contain sensitive content or "spoilers" for things like movies, games, or books. The content is hidden behind a grey box or a black bar, and other users can choose to reveal the content by clicking on it.
+
+To mark a message as a spoiler in Discord, you can use markdown codes by typing two vertical bars before and after your text, like this: ||spoiler content||. When you send the message, it will appear hidden to others until they click to reveal it.
+
+A hidden spoiler:
+
+<img width="63" alt="image" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/4f0ba277-ed42-4c60-9e57-ca76c973e1a9">
+
+A spoiler revealed:
+
+<img width="63" alt="image" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/12dcf99f-bffc-4a9c-8776-542e8c4507e8">
+
+
 ## How to use?
 
 1. Visit the website [here](https://discord-spoiler-text-converter.thepushkarp.com/).
