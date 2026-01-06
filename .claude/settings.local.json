@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/pupa/projects/discord-spoiler-text-converter log --all --oneline)",
+      "Bash(git -C /Users/pupa/projects/discord-spoiler-text-converter branch:*)",
+      "Bash(yarn test:run:*)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}

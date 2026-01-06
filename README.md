@@ -2,49 +2,73 @@
 
 <h1 align="center">Discord Spoiler Text Converter</h1>
 
-<p align="center">Convert your text to Discord Spoiler Text in an instant</P>
+<p align="center">Convert your text to Discord Spoiler Text in an instant</p>
 
 ---
 
 ## What is this?
 
-This is a simple web app that converts your text to Discord Spoiler Text. You can use this to convert your text to Discord Spoiler Text and then copy it to your clipboard all through the click of buttons.
+A modern web app that converts your text to Discord Spoiler Text with a live preview. Features real-time conversion, multiple wrap modes, and a Discord-styled preview so you can see exactly how your spoiler will look.
+
+## Features
+
+- **Real-time conversion** - Text converts automatically as you type
+- **Three wrap modes** - Per character, per word, or entire text
+- **Live preview** - See how your spoiler looks in Discord (click to reveal!)
+- **Character count** - Track your message length with Discord's 2000/4000 char limits
+- **Dark/Light mode** - Toggle or follows system preference
+- **Keyboard shortcuts** - Power user friendly
+- **Accessible** - Full keyboard navigation and screen reader support
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl/Cmd + 1/2/3` | Switch wrap modes |
+| `Ctrl/Cmd + Enter` | Copy to clipboard |
+| `Esc` | Clear input |
 
 ## What are Discord Spoilers?
 
-Discord spoilers are a feature that allows users to hide messages, images, or attachments that might contain sensitive content or "spoilers" for things like movies, games, or books. The content is hidden behind a grey box or a black bar, and other users can choose to reveal the content by clicking on it.
+Discord spoilers hide messages behind a grey box until clicked. To create a spoiler manually, wrap text in double bars: `||spoiler content||`.
 
-To mark a message as a spoiler in Discord, you can use markdown codes by typing two vertical bars before and after your text, like this: ||spoiler content||. When you send the message, it will appear hidden to others until they click to reveal it.
+| Hidden | Revealed |
+|--------|----------|
+| <img width="63" alt="Hidden spoiler" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/4f0ba277-ed42-4c60-9e57-ca76c973e1a9"> | <img width="63" alt="Revealed spoiler" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/12dcf99f-bffc-4a9c-8776-542e8c4507e8"> |
 
-A hidden spoiler:
+## Development
 
-<img width="63" alt="image" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/4f0ba277-ed42-4c60-9e57-ca76c973e1a9">
+```bash
+# Install dependencies
+yarn install
 
-A spoiler revealed:
+# Start dev server (localhost:3000)
+yarn dev
 
-<img width="63" alt="image" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/12dcf99f-bffc-4a9c-8776-542e8c4507e8">
+# Build for production
+yarn build
 
+# Run tests
+yarn test
 
-## How to use?
+# Format code
+yarn format
+```
 
-1. Visit the website [here](https://discord-spoiler-text-converter.thepushkarp.com/).
-2. Enter your text in the input box.
-3. Click on the "Convert to Discord Spoiler Text" button.
-4. Your text will be converted to Discord Spoiler Text.
-5. Click on the "Copy to Clipboard" button to copy the converted text to your clipboard.
+## Tech Stack
 
-## LICENSE
+- React 18 + Vite
+- Tailwind CSS
+- Vitest + Testing Library
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
 <p align="center">
-  <a href="https://github.com/thepushkarp/discord-spoiler-text-converter" target="_blank" rel="noopener noreferrer">
-    Discord Spoiler Text Converter
-  </a>
+  <a href="https://github.com/thepushkarp/discord-spoiler-text-converter">Discord Spoiler Text Converter</a>
   made with ❤️ by
-  <a href="https://github.com/thepushkarp">
-    Pushkar  Patel
-  </a>
+  <a href="https://github.com/thepushkarp">Pushkar Patel</a>
 </p>
