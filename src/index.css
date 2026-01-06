@@ -1,65 +1,96 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Honk&family=Poppins&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1rem;
-    scroll-behavior: smooth;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased;
+        font-family:
+            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, sans-serif;
+    }
+
+    *:focus-visible {
+        @apply outline-2 outline-offset-2 outline-indigo-500;
+    }
+
+    *:focus:not(:focus-visible) {
+        outline: none;
+    }
 }
 
-.heading {
-    font-family: 'Honk', sans-serif;
-    font-size: 5rem;
-    line-height: 1;
-    color: #000;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer components {
     .heading {
-        color: #fff;
+        font-family:
+            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+    }
+
+    .kbd {
+        @apply inline-flex items-center justify-center px-1.5 py-0.5 rounded;
+        @apply bg-slate-200 dark:bg-slate-700;
+        @apply text-slate-500 dark:text-slate-400;
+        @apply text-[10px] font-mono font-medium;
+        @apply border border-slate-300 dark:border-slate-600;
+        min-width: 1.5rem;
     }
 }
 
-
-@media only screen and (max-width: 640px) {
-    .heading {
-        font-size: 3rem;
+@layer utilities {
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
     }
 }
 
-@media only screen and (min-width: 640px) {
-    .heading {
-        font-size: 3rem;
-    }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 
-@media only screen and (min-width: 768px) {
-   .heading {
-        font-size: 4rem;
-    }
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-@media only screen and (min-width: 1024px) {
-    .heading {
-        font-size: 5rem;
-    }
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-600;
+    border-radius: 4px;
 }
 
-@media only screen and (min-width: 1280px) {
-    .heading {
-        font-size: 5rem;
-    }
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-500;
 }
 
-@media only screen and (min-width: 1536px) {
-    .heading {
-        font-size: 5rem;
-    }
+/* Selection */
+::selection {
+    @apply bg-indigo-500 text-white;
+}
+
+/* Textarea styling */
+textarea {
+    scrollbar-width: thin;
+}
+
+.dark textarea {
+    scrollbar-color: rgb(71 85 105) transparent;
+}
+
+textarea {
+    scrollbar-color: rgb(203 213 225) transparent;
 }
