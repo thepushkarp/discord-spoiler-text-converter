@@ -79,4 +79,27 @@ describe("<SpoilerConverter />", () => {
     await user.click(spoiler);
     expect(screen.getByRole("button", { name: /hide spoiler/i })).toBeInTheDocument();
   });
+
+  it("keeps spoiler preview in sync for pipe characters", async () => {
+    const user = userEvent.setup();
+    render(<SpoilerConverter />);
+
+    const input = screen.getByPlaceholderText(/paste or type your text here/i);
+    await user.clear(input);
+    await user.type(input, "|");
+
+    const output = screen.getByPlaceholderText(/converted spoiler markdown/i);
+    await waitFor(() => expect(output).toHaveValue("|||||"));
+
+    const spoilers = await screen.findAllByRole("button", { name: /reveal spoiler/i });
+    expect(spoilers).toHaveLength(1);
+    const spoiler = spoilers[0];
+    expect(spoiler).toBeDefined();
+    if (spoiler == null) {
+      throw new Error("Expected one spoiler button in preview");
+    }
+
+    await user.click(spoiler);
+    expect(screen.getByRole("button", { name: /hide spoiler/i })).toHaveTextContent("|");
+  });
 });

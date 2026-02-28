@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 
 type ErrorProps = Readonly<{
@@ -8,7 +9,11 @@ type ErrorProps = Readonly<{
 }>;
 
 export default function ErrorPage(props: ErrorProps) {
-  const { reset } = props;
+  const { error, reset } = props;
+
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-4 py-14">

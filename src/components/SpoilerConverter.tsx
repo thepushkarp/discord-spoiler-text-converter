@@ -50,39 +50,43 @@ function parsePreviewSegments(markdown: string): PreviewSegment[] {
   }
 
   const segments: PreviewSegment[] = [];
-  const regex = /\|\|([\s\S]*?)\|\|/gu;
   let spoilerIndex = 0;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null = null;
+  let cursor = 0;
 
-  while (true) {
-    match = regex.exec(markdown);
-    if (match == null) {
+  while (cursor < markdown.length) {
+    const open = markdown.indexOf("||", cursor);
+    if (open === -1) {
+      segments.push({
+        kind: "text",
+        value: markdown.slice(cursor),
+      });
       break;
     }
 
-    const start = match.index;
-    if (start > lastIndex) {
+    if (open > cursor) {
       segments.push({
         kind: "text",
-        value: markdown.slice(lastIndex, start),
+        value: markdown.slice(cursor, open),
       });
+    }
+
+    const contentStart = open + 2;
+    const close = markdown.indexOf("||", contentStart + 1);
+    if (close === -1) {
+      segments.push({
+        kind: "text",
+        value: markdown.slice(open),
+      });
+      break;
     }
 
     segments.push({
       kind: "spoiler",
-      value: match[1] ?? "",
+      value: markdown.slice(contentStart, close),
       index: spoilerIndex,
     });
     spoilerIndex += 1;
-    lastIndex = regex.lastIndex;
-  }
-
-  if (lastIndex < markdown.length) {
-    segments.push({
-      kind: "text",
-      value: markdown.slice(lastIndex),
-    });
+    cursor = close + 2;
   }
 
   return segments;
