@@ -1,72 +1,78 @@
 @import "tailwindcss";
 
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    text-rendering: geometricPrecision;
+  font-family:
+    var(--font-body),
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 ::selection {
-    background: rgba(254, 234, 59, 0.35);
+  background: rgba(254, 234, 59, 0.35);
 }
 
 @keyframes riseIn {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-        filter: blur(6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 @keyframes tapeShimmer {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-    }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .rise-in {
-    animation: riseIn 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: riseIn 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .rise-in-delay-1 {
-    animation-delay: 90ms;
+  animation-delay: 90ms;
 }
 
 .rise-in-delay-2 {
-    animation-delay: 160ms;
+  animation-delay: 160ms;
 }
 
 .rise-in-delay-3 {
-    animation-delay: 240ms;
+  animation-delay: 240ms;
 }
 
 .tape-shimmer {
-    background-size: 200% 200%;
-    animation: tapeShimmer 6s linear infinite;
+  background-size: 200% 200%;
+  animation: tapeShimmer 6s linear infinite;
 }

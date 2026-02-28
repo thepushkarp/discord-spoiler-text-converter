@@ -22,6 +22,7 @@ Date: 2026-03-01
 ## Current `package.json` Summary
 
 Scripts:
+
 - `start`: `react-scripts start`
 - `build`: `react-scripts build`
 - `test`: `react-scripts test`
@@ -29,6 +30,7 @@ Scripts:
 - `format` / `format:check`: Prettier (glob appears incorrect: `**/*.{js{x},ts{x},...}`)
 
 Notable deps:
+
 - `react@18.2.0`, `react-dom@18.2.0`
 - `react-scripts@5.0.1`
 - `react-helmet@6.1.0`
@@ -47,4 +49,3 @@ Notable deps:
 - Stale test: `src/App.test.js` expects "learn react" text that no longer exists.
 - `build:css` references `src/tailwind.css`, which is not present in the repo.
 - SEO/social metadata is managed in `react-helmet` with incorrect OG/Twitter image paths.
-

@@ -24,7 +24,6 @@ A spoiler revealed:
 
 <img width="63" alt="image" src="https://github.com/thepushkarp/discord-spoiler-text-converter/assets/42088801/12dcf99f-bffc-4a9c-8776-542e8c4507e8">
 
-
 ## How to use?
 
 1. Visit the website [here](https://discord-spoiler-text-converter.thepushkarp.com/).
