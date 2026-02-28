@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
@@ -16,7 +16,7 @@ function mockClipboard() {
 }
 
 describe("<SpoilerConverter />", () => {
-  it("converts input to spoiler markdown", async () => {
+  it("converts input to spoiler markdown in real time", async () => {
     const user = userEvent.setup();
     render(<SpoilerConverter />);
 
@@ -24,35 +24,32 @@ describe("<SpoilerConverter />", () => {
     await user.clear(input);
     await user.type(input, "hi there");
 
-    await user.click(screen.getByRole("button", { name: /convert/i }));
-
     const output = screen.getByPlaceholderText(/converted spoiler markdown/i);
-    expect(output).toHaveValue("||h||||i|| ||t||||h||||e||||r||||e||");
+    await waitFor(() => expect(output).toHaveValue("||h||||i|| ||t||||h||||e||||r||||e||"));
   });
 
-  it("converts on Ctrl+Enter", async () => {
+  it("updates conversion immediately when mode changes", async () => {
     const user = userEvent.setup();
     render(<SpoilerConverter />);
 
     const input = screen.getByPlaceholderText(/paste or type your text here/i);
     await user.clear(input);
-    await user.type(input, "ok");
-
-    fireEvent.keyDown(input, { key: "Enter", ctrlKey: true });
+    await user.type(input, "hi   there");
 
     const output = screen.getByPlaceholderText(/converted spoiler markdown/i);
-    expect(output).toHaveValue("||o||||k||");
+    await waitFor(() => expect(output).toHaveValue("||h||||i||   ||t||||h||||e||||r||||e||"));
+
+    await user.click(screen.getByLabelText(/word/i));
+    await waitFor(() => expect(output).toHaveValue("||hi|| ||there||"));
   });
 
-  it("copies output to clipboard and shows feedback", async () => {
+  it("copies output to clipboard without showing a success toast", async () => {
     const user = userEvent.setup();
     render(<SpoilerConverter />);
 
     const input = screen.getByPlaceholderText(/paste or type your text here/i);
     await user.clear(input);
     await user.type(input, "ab");
-
-    await user.click(screen.getByRole("button", { name: /convert/i }));
 
     const output = screen.getByPlaceholderText(/converted spoiler markdown/i);
     await waitFor(() => expect(output).toHaveValue("||a||||b||"));
@@ -64,6 +61,22 @@ describe("<SpoilerConverter />", () => {
     await user.click(copyButton);
 
     await waitFor(() => expect(writeText).toHaveBeenCalledWith("||a||||b||"));
-    expect(await screen.findByText(/copied to clipboard/i)).toBeInTheDocument();
+    expect(screen.queryByText(/copied to clipboard/i)).not.toBeInTheDocument();
+  });
+
+  it("renders discord preview and lets spoilers be revealed", async () => {
+    const user = userEvent.setup();
+    render(<SpoilerConverter />);
+
+    const input = screen.getByPlaceholderText(/paste or type your text here/i);
+    await user.clear(input);
+    await user.type(input, "top secret");
+    await user.click(screen.getByLabelText(/line/i));
+
+    const spoiler = await screen.findByRole("button", { name: /reveal spoiler/i });
+    expect(spoiler).toHaveTextContent("top secret");
+
+    await user.click(spoiler);
+    expect(screen.getByRole("button", { name: /hide spoiler/i })).toBeInTheDocument();
   });
 });
