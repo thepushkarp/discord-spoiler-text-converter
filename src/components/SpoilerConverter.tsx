@@ -104,14 +104,14 @@ export default function SpoilerConverter() {
     }, [toast]);
 
     return (
-        <section className="rounded-2xl border border-slate-700/60 bg-[#0b0f17]/65 p-5 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset,0_35px_90px_rgba(0,0,0,0.55)] backdrop-blur sm:p-7">
+        <section className="rounded-2xl border border-slate-300/70 bg-white/70 p-5 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset,0_25px_60px_rgba(0,0,0,0.12)] backdrop-blur dark:border-slate-700/60 dark:bg-[#0b0f17]/65 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset,0_35px_90px_rgba(0,0,0,0.55)] sm:p-7">
             <div className="flex flex-col gap-4">
                 <div>
                     <div className="flex items-end justify-between gap-3">
-                        <h2 className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-200">
+                        <h2 className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-200">
                             Input
                         </h2>
-                        <p className="font-[var(--font-body)] text-xs text-slate-400">
+                        <p className="font-[var(--font-body)] text-xs text-slate-600 dark:text-slate-400">
                             Ctrl/Cmd+Enter to convert
                         </p>
                     </div>
@@ -132,12 +132,12 @@ export default function SpoilerConverter() {
                         }}
                         placeholder="Paste or type your text here..."
                         rows={4}
-                        className="mt-3 w-full resize-y rounded-xl border border-slate-700/70 bg-black/35 px-4 py-3 font-[var(--font-body)] text-slate-100 placeholder:text-slate-500 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] outline-none focus-visible:ring-2 focus-visible:ring-[#feea3b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070a10]"
+                        className="mt-3 w-full resize-y rounded-xl border border-slate-300/70 bg-white/70 px-4 py-3 font-[var(--font-body)] text-slate-900 placeholder:text-slate-500 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] outline-none focus-visible:ring-2 focus-visible:ring-[#feea3b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf8f2] dark:border-slate-700/70 dark:bg-black/35 dark:text-slate-100 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] dark:focus-visible:ring-offset-[#070a10]"
                     />
                 </div>
 
                 <div>
-                    <p className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-200">
+                    <p className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-200">
                         Convert by
                     </p>
 
@@ -159,24 +159,24 @@ export default function SpoilerConverter() {
                                     />
                                     <label
                                         htmlFor={id}
-                                        className="block cursor-pointer rounded-xl border border-slate-700/70 bg-black/20 px-4 py-3 font-[var(--font-body)] shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] transition focus-within:ring-2 focus-within:ring-[#feea3b] focus-within:ring-offset-2 focus-within:ring-offset-[#070a10] hover:border-slate-600 peer-checked:border-[#feea3b]/80 peer-checked:bg-[#feea3b]/[0.08]"
+                                        className="block cursor-pointer rounded-xl border border-slate-300/70 bg-white/70 px-4 py-3 font-[var(--font-body)] shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] transition focus-within:ring-2 focus-within:ring-[#feea3b] focus-within:ring-offset-2 focus-within:ring-offset-[#faf8f2] hover:border-slate-400 peer-checked:border-[#feea3b]/80 peer-checked:bg-[#feea3b]/[0.10] dark:border-slate-700/70 dark:bg-black/20 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] dark:focus-within:ring-offset-[#070a10] dark:hover:border-slate-600 dark:peer-checked:bg-[#feea3b]/[0.08]"
                                     >
                                         <div className="flex items-center justify-between gap-3">
-                                            <span className="text-sm font-semibold text-slate-100">
+                                            <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                                                 {option.label}
                                             </span>
                                             <span
                                                 className={[
                                                     'rounded-full border px-2 py-0.5 text-[11px] tracking-wide',
                                                     checked
-                                                        ? 'border-[#feea3b]/40 bg-[#feea3b]/[0.12] text-[#feea3b]'
-                                                        : 'border-slate-700/60 bg-black/20 text-slate-400',
+                                                        ? 'border-[#feea3b]/50 bg-[#feea3b]/[0.14] text-[#6a5400] dark:text-[#feea3b]'
+                                                        : 'border-slate-300/70 bg-white/60 text-slate-600 dark:border-slate-700/60 dark:bg-black/20 dark:text-slate-400',
                                                 ].join(' ')}
                                             >
                                                 {option.value.toUpperCase()}
                                             </span>
                                         </div>
-                                        <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                                        <p className="mt-1 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
                                             {option.description}
                                         </p>
                                     </label>
@@ -218,7 +218,7 @@ export default function SpoilerConverter() {
                             setOutput('');
                             setToast(null);
                         }}
-                        className="inline-flex w-full items-center justify-center rounded-xl border border-slate-700/70 bg-black/25 px-4 py-3 font-[var(--font-body)] text-sm font-semibold text-slate-200 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] transition hover:border-slate-600 active:translate-y-px sm:w-auto"
+                        className="inline-flex w-full items-center justify-center rounded-xl border border-slate-300/70 bg-white/60 px-4 py-3 font-[var(--font-body)] text-sm font-semibold text-slate-800 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] transition hover:border-slate-400 active:translate-y-px dark:border-slate-700/70 dark:bg-black/25 dark:text-slate-200 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] dark:hover:border-slate-600 sm:w-auto"
                     >
                         Clear
                     </button>
@@ -226,14 +226,14 @@ export default function SpoilerConverter() {
 
                 <div>
                     <div className="flex items-center justify-between gap-3">
-                        <h2 className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-200">
+                        <h2 className="font-[var(--font-body)] text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-200">
                             Output
                         </h2>
                         <button
                             type="button"
                             onClick={() => void handleCopy()}
                             disabled={!canCopy}
-                            className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/30 px-3 py-2 font-[var(--font-body)] text-xs font-semibold text-slate-200 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] transition hover:border-slate-600 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-55"
+                            className="inline-flex items-center gap-2 rounded-full border border-slate-300/70 bg-white/70 px-3 py-2 font-[var(--font-body)] text-xs font-semibold text-slate-800 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] transition hover:border-slate-400 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-55 dark:border-slate-700/70 dark:bg-black/30 dark:text-slate-200 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] dark:hover:border-slate-600"
                         >
                             {copyLocked ? 'Copied' : 'Copy'}
                             <svg
@@ -279,7 +279,7 @@ export default function SpoilerConverter() {
                                 }
                             }
                         }}
-                        className="mt-3 w-full resize-y rounded-xl border border-slate-700/70 bg-black/35 px-4 py-3 font-[var(--font-mono)] text-sm text-slate-100 placeholder:text-slate-500 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] outline-none focus-visible:ring-2 focus-visible:ring-[#9ff4ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070a10]"
+                        className="mt-3 w-full resize-y rounded-xl border border-slate-300/70 bg-white/70 px-4 py-3 font-[var(--font-mono)] text-sm text-slate-900 placeholder:text-slate-500 shadow-[0_1px_0_rgba(255,255,255,0.55)_inset] outline-none focus-visible:ring-2 focus-visible:ring-[#9ff4ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf8f2] dark:border-slate-700/70 dark:bg-black/35 dark:text-slate-100 dark:shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] dark:focus-visible:ring-offset-[#070a10]"
                     />
 
                     <div className="mt-3 min-h-6" role="status" aria-live="polite">

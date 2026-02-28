@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    color-scheme: dark;
+    color-scheme: light dark;
 }
 
 html,
@@ -70,4 +70,3 @@ body {
     background-size: 200% 200%;
     animation: tapeShimmer 6s linear infinite;
 }
-
