@@ -2,7 +2,7 @@
 
 <h1 align="center">Discord Spoiler Text Converter</h1>
 
-<p align="center">Convert your text to Discord Spoiler Text in an instant</P>
+<p align="center">Convert your text to Discord Spoiler Text in an instant</p>
 
 ---
 
@@ -32,6 +32,17 @@ A spoiler revealed:
 4. Your text will be converted to Discord Spoiler Text.
 5. Click on the "Copy to Clipboard" button to copy the converted text to your clipboard.
 
+## Development
+
+This project is a Next.js app using Bun.
+
+```bash
+bun install
+bun run dev
+```
+
+More commands and setup notes are in [`docs/dev.md`](docs/dev.md).
+
 ## LICENSE
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
@@ -42,7 +53,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   <a href="https://github.com/thepushkarp/discord-spoiler-text-converter" target="_blank" rel="noopener noreferrer">
     Discord Spoiler Text Converter
   </a>
-  made with ❤️ by
+  made by
   <a href="https://github.com/thepushkarp">
     Pushkar  Patel
   </a>
