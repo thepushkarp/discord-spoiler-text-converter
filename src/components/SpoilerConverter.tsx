@@ -295,14 +295,14 @@ export default function SpoilerConverter() {
             className="mt-3 w-full resize-y rounded-xl border border-slate-700/70 bg-black/35 px-4 py-3 font-[var(--font-mono)] text-sm text-slate-100 placeholder:text-slate-500 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] outline-none focus-visible:ring-2 focus-visible:ring-[#9ff4ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070a10]"
           />
 
-          <div className="mt-3 min-h-6" role="status" aria-live="polite">
-            {toast == null ? null : (
+          {toast == null ? null : (
+            <div className="mt-2" role="status" aria-live="polite">
               <p className="inline-flex items-center gap-2 rounded-full border border-rose-400/25 bg-rose-400/10 px-3 py-1.5 font-[var(--font-body)] text-xs font-semibold text-rose-200">
                 <span aria-hidden className="h-2 w-2 rounded-full bg-rose-300" />
                 <span>{toast.message}</span>
               </p>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         <div>
