@@ -3,13 +3,22 @@
 # dependencies
 /node_modules
 /.pnp
+/.pnp.*
 .pnp.js
+/.yarn
+.yarnrc.yml
 
 # testing
 /coverage
 
 # production
 /build
+
+# next.js
+/.next
+/out
+/.turbo
+/.vercel
 
 # misc
 .DS_Store
